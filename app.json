@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "random-wp",
+    "name": "Random Wikipages",
     "slug": "random-wp",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/1122px-Wikipedia-logo-v2.svg.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,6 +24,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "Learn about random topics from any of Wikipedia's major language editions"
   }
 }

@@ -1,3 +1,4 @@
+import * as WebBrowser from "expo-web-browser";
 import React from "react";
 import { Image, Picker, Text, View } from "react-native";
 import { Icon } from "react-native-elements";
@@ -5,17 +6,16 @@ import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { langs } from "./languages";
 import { styles } from "./styles";
 
-// const instructions = Platform.select({
-//   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
-//   android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
-// });
-
 export function Index() {
   const [lang, setLang] = React.useState("en");
+  const [wikipediaLocalized, setWikipediaLocalized] = React.useState(null);
   const [pageJson, setPageJson] = React.useState(null);
 
   React.useEffect(() => {
-    if (!lang) setLang("en");
+    if (!lang) {
+      setLang("en");
+      return;
+    }
     handleRefresh();
   }, [lang]);
 
@@ -36,10 +36,16 @@ export function Index() {
       .then((json) => {
         console.log(json);
         setPageJson(json);
+        // hack to stall wp link label when changing language, at the cost of one render
+        setWikipediaLocalized(langs.find((e) => e.code === lang).wp);
       })
       .catch((error) => {
-        console.error(error);
+        console.log("fetch error: ", error);
       });
+  };
+
+  const handleSourceLink = () => {
+    WebBrowser.openBrowserAsync(pageJson.content_urls.mobile.page);
   };
 
   return (
@@ -80,11 +86,17 @@ export function Index() {
               ></Image>
             ) : null}
             <Text>{pageJson.extract}</Text>
+            <TouchableOpacity
+              style={styles.sourceLink}
+              onPress={handleSourceLink}
+            >
+              <Text style={styles.sourceLinkText}>
+                {wikipediaLocalized}: {pageJson.title}
+              </Text>
+            </TouchableOpacity>
           </ScrollView>
         </>
       ) : null}
-
-      {/* <Text style={styles.instructions}>{instructions}</Text> */}
     </>
   );
 }

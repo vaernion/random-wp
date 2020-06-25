@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   controls: {
     flexDirection: "row",
-    marginTop: 50,
+    marginTop: 40,
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 10,
@@ -16,19 +16,26 @@ export const styles = StyleSheet.create({
   },
   pageContainer: {
     flex: 1,
+    marginBottom: 20,
   },
   pageContent: {
-    marginVertical: 20,
-    paddingHorizontal: 30,
-    paddingVertical: 15,
-    width: "80%",
+    padding: 20,
+    width: "90%",
     alignSelf: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",
   },
-  title: { fontWeight: "bold", fontSize: 20 },
+  title: {
+    fontWeight: "bold",
+    fontSize: 20,
+  },
   thumbnail: {
-    alignSelf: "center",
     margin: 15,
+  },
+  sourceLink: {
+    marginTop: 10,
+  },
+  sourceLinkText: {
+    color: "blue",
   },
 });
