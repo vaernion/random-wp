@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install and Build 🔧
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-        uses: expo/expo-github-action@v5
+      - uses: expo/expo-github-action@v5
         with:
           expo-version: 3.x
           expo-cache: true
+
+      - name: Install and Build 🔧
         run: |
           yarn install
           expo build:web
