@@ -14,13 +14,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
+
+      - name: Install and Build 🔧
       - uses: expo/expo-github-action@v5
         with:
           expo-version: 3.x
           expo-cache: true
-
-      - name: Install and Build 🔧
-        run: |
+      - run: |
           yarn install
           expo build:web
 
