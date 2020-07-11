@@ -10,6 +10,7 @@ export function Index() {
   const [lang, setLang] = React.useState("en");
   const [wikipediaLocalized, setWikipediaLocalized] = React.useState(null);
   const [pageJson, setPageJson] = React.useState(null);
+  const [errorText, setErrorText] = React.useState("");
 
   React.useEffect(() => {
     if (!lang) {
@@ -33,12 +34,15 @@ export function Index() {
     fetch(url)
       .then((response) => response.json())
       .then((json) => {
+        setErrorText("");
         console.log(json);
         setPageJson(json);
         // hack to stall wp link label when changing language, at the cost of one render
         setWikipediaLocalized(langs.find((e) => e.code === lang).wp);
       })
       .catch((error) => {
+        // could add translations as with wikipediaLocalized
+        setErrorText("Error, try again");
         console.log("fetch error: ", error);
       });
   };
@@ -51,9 +55,15 @@ export function Index() {
     <>
       <View style={styles.controls}>
         <View style={styles.dummyContainer}></View>
-        <TouchableOpacity style={styles.refreshButton} onPress={handleRefresh}>
-          <Icon name="redo" type="font-awesome-5" size={35} />
-        </TouchableOpacity>
+        <View style={styles.refreshContainer}>
+          <Text>{errorText}</Text>
+          <TouchableOpacity
+            style={styles.refreshButton}
+            onPress={handleRefresh}
+          >
+            <Icon name="redo" type="font-awesome-5" size={35} />
+          </TouchableOpacity>
+        </View>
         <Picker
           style={styles.langPicker}
           selectedValue={lang}

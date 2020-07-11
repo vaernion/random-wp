@@ -11,11 +11,15 @@ export const styles = StyleSheet.create({
   dummyContainer: {
     width: 120,
   },
-  refreshButton: {
-    width: 50,
+  refreshContainer: {
+    width: 100,
+    alignItems: "center",
   },
   langPicker: {
     width: 120,
+  },
+  refreshButton: {
+    width: 50,
   },
   pageContainer: {
     flex: 1,
