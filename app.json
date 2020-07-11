@@ -5,7 +5,7 @@
     "platforms": ["ios", "android", "web"],
     "version": "0.2.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon-rwp-paint.png",
     "splash": {
       "image": "./assets/1122px-Wikipedia-logo-v2.svg.png",
       "resizeMode": "contain",
