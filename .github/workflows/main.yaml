@@ -20,7 +20,7 @@ jobs:
           expo-cache: true
 
       - name: Install and Build 🔧
-      - run: |
+        run: |
           yarn install
           expo build:web
 
