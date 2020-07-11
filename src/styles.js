@@ -3,26 +3,29 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   controls: {
     flexDirection: "row",
-    marginTop: 40,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginTop: 40,
     marginBottom: 10,
   },
+  dummyContainer: {
+    width: 120,
+  },
+  refreshButton: {
+    width: 50,
+  },
   langPicker: {
-    marginLeft: 20,
-    alignSelf: "flex-end",
-    width: 150,
-    height: 30,
+    width: 120,
   },
   pageContainer: {
     flex: 1,
     marginBottom: 20,
   },
   pageContent: {
-    padding: 20,
     width: "90%",
     alignSelf: "center",
     alignItems: "center",
+    padding: 20,
     backgroundColor: "#F5FCFF",
   },
   title: {

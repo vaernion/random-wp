@@ -51,8 +51,9 @@ export function Index() {
   return (
     <>
       <View style={styles.controls}>
-        <TouchableOpacity onPress={handleRefresh}>
-          <Icon name="refresh" type="font-awesome" />
+        <View style={styles.dummyContainer}></View>
+        <TouchableOpacity style={styles.refreshButton} onPress={handleRefresh}>
+          <Icon name="redo" type="font-awesome-5" size={35} />
         </TouchableOpacity>
         <Picker
           style={styles.langPicker}
