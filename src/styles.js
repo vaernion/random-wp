@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   langPicker: {
     marginLeft: 20,
-    alignSelf: "center",
+    alignSelf: "flex-end",
     width: 150,
     height: 30,
   },
