@@ -28,7 +28,6 @@ export function Index() {
   };
 
   const fetchWiki = (lang) => {
-    // const url = `http://${lang}.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=content&generator=random&grnnamespace=0&grnlimit=1`;
     const url = `https://${lang}.wikipedia.org/api/rest_v1/page/random/summary`;
 
     fetch(url)
