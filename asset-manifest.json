@@ -4,8 +4,8 @@
     "app.js.map": "/random-wp/static/js/app.438a7d95.chunk.js.map",
     "runtime~app.js": "/random-wp/static/js/runtime~app.e5ae1bb6.js",
     "runtime~app.js.map": "/random-wp/static/js/runtime~app.e5ae1bb6.js.map",
-    "static/js/2.2ddd80e2.chunk.js": "/random-wp/static/js/2.2ddd80e2.chunk.js",
-    "static/js/2.2ddd80e2.chunk.js.map": "/random-wp/static/js/2.2ddd80e2.chunk.js.map",
+    "static/js/2.fc2ba515.chunk.js": "/random-wp/static/js/2.fc2ba515.chunk.js",
+    "static/js/2.fc2ba515.chunk.js.map": "/random-wp/static/js/2.fc2ba515.chunk.js.map",
     "fonts/AntDesign.ttf": "/random-wp/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/random-wp/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/random-wp/./fonts/Feather.ttf",
@@ -24,7 +24,7 @@
     "index.html": "/random-wp/index.html",
     "manifest.json": "/random-wp/manifest.json",
     "serve.json": "/random-wp/serve.json",
-    "static/js/2.2ddd80e2.chunk.js.LICENSE.txt": "/random-wp/static/js/2.2ddd80e2.chunk.js.LICENSE.txt",
+    "static/js/2.fc2ba515.chunk.js.LICENSE.txt": "/random-wp/static/js/2.fc2ba515.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/random-wp/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/random-wp/static/media/heart.23b5c2c0.png",
     "static/media/rocket.png": "/random-wp/static/media/rocket.d2f3bf41.png",
@@ -32,7 +32,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.e5ae1bb6.js",
-    "static/js/2.2ddd80e2.chunk.js",
+    "static/js/2.fc2ba515.chunk.js",
     "static/js/app.438a7d95.chunk.js"
   ]
 }
