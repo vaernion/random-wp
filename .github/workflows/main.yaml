@@ -3,8 +3,8 @@ name: Build Expo & Deploy to GH Pages
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
+    paths-ignore:
+      - "README.md"
 
 jobs:
   build:

@@ -2,7 +2,11 @@
   "expo": {
     "name": "Random Wikipages",
     "slug": "random-wp",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "0.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon-rwp-paint.png",
@@ -14,7 +18,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
